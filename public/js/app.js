@@ -26,7 +26,7 @@ class App extends React.Component{
                     {game.title}
                     {game.genre}
                     {game.year}
-                    {game.image}
+                    <img src ={game.image} alt = {game.title}>
                     {game.review}
                     </li>
                 )

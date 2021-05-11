@@ -17,6 +17,7 @@ class App extends React.Component{
     render = () => {
         return <div>
         <h1>Testing</h1>
+        <Test></Test>
         <div>
         <ul>
         {this.state.games.map(
@@ -25,9 +26,10 @@ class App extends React.Component{
                     <li key = {game._id}>
                     {game.title}
                     {game.genre}
-                    {game.year}
-                    <img src ={game.image} alt = {game.title}>
-                    {game.review}
+                    {game.release}
+                    <img src ={game.image} alt = {game.title}/>
+                    {game.description}
+                    {game.rating}
                     </li>
                 )
             })

@@ -4,7 +4,6 @@
   "engines": {
     "node": "14.16.0"
   },
-  "description": "",
   "description": "Troy Redway",
   "main": "server.js",
   "scripts": {

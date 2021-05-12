@@ -21,7 +21,7 @@ class App extends React.Component{
     render = () => {
         return <div>
         <h1>Testing</h1>
-        <Test></Test>
+
         <div>
         <ul>
         {this.state.games.map(

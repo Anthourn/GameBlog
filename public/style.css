@@ -1,0 +1,10 @@
+html
+{background: grey;}
+
+ul {
+    display:flex;
+}
+
+h1 {
+    color: white;
+}

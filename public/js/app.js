@@ -57,7 +57,7 @@ class App extends React.Component{
     }
     render = () => {
         return <div>
-        <h1>Testing</h1>
+
         <form onSubmit={this.handleSubmit}>
             <label htmlFor="title">Title</label>
             <input type="text" id="title" onChange={this.handleChange} />
@@ -65,6 +65,17 @@ class App extends React.Component{
             <label htmlFor="image">Image</label>
             <input type="text" id="image" onChange={this.handleChange}
             value={this.state.image} />
+            <label htmlFor="year">Year</label>
+            <input type="text" id="image" onChange={this.handleChange}
+            value={this.state.year} />
+            <label htmlFor="genre">Genre</label>
+            <input type="text" id="genre" onChange={this.handleChange}
+            value={this.state.genre} />
+            <br/>
+            <label htmlFor="review">Review</label>
+            <input type="text" id="review" onChange={this.handleChange}
+            value={this.state.review} />
+            <br/>
             <br/>
             <input type="submit" value="Create Game"/>
         </form>
@@ -73,12 +84,14 @@ class App extends React.Component{
         {this.state.games.map(
             (game =>{
                 return (
+                    
                     <li key = {game._id}>
                     {game.title}<br/>
                     {game.genre}<br/>
                     {game.year}<br/>
                     <img src ={game.image} alt = {game.title}/><br/>
                     {game.review}
+                    <details>
                         <summary>Edit Game</summary>
                         <form id={game._id} onSubmit={this.updateGame}>
                             <label htmlFor="title">Title</label>
@@ -92,6 +105,7 @@ class App extends React.Component{
                         </form>
                         <button value={game._id} onClick={this.deleteGame}>
                         DELETE </button>
+                        </details>
                     </li>
                 )
             })

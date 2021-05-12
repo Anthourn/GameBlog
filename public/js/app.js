@@ -9,6 +9,10 @@ class App extends React.Component{
 
 
     }
+
+    handleChange = (event) => {
+        this.setState({[event.target.id]: event.target.value})
+    }
     componentDidMount = () => {
         axios.get('/games').then((response) =>{
             this.setState({games:response.data})
@@ -26,10 +30,9 @@ class App extends React.Component{
                     <li key = {game._id}>
                     {game.title}
                     {game.genre}
-                    {game.release}
+                    {game.year}
                     <img src ={game.image} alt = {game.title}/>
-                    {game.description}
-                    {game.rating}
+                    {game.review}
                     </li>
                 )
             })

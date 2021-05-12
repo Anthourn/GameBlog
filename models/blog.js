@@ -4,7 +4,8 @@ const gameSchema = new mongoose.Schema({
     title: String,
     year: String,
     genre: String,
-    description: String,
+    review: String,
+    image: String,
     rating: String,
 })
 

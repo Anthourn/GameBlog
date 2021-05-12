@@ -1,6 +1,10 @@
 html
-{background: grey;}
+{background: #421322;}
 
 ul {
     display:flex;
+}
+
+h1 {
+    color: white;
 }

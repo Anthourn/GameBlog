@@ -76,6 +76,16 @@ class App extends React.Component{
         })
 
     }
+    warning = () => {
+        this.setState({
+            filter:'greyScale'
+        })
+    }
+    reset = () => {
+        this.setState({
+            filter:'img'
+        })
+    }
     render = () => {
         return <div>
         <button className='waves-effect waves-light btn' onClick={this.revealModal}>New Game</button>
@@ -142,9 +152,9 @@ class App extends React.Component{
                             <label htmlFor="review">Review</label>
                             <br/>
                             <input type="text" id="review" onChange={this.handleChange}/>
-                            <input type="submit" value="Update Game"/>
+                            <input type="submit" className="btn waves-effect waves-light" value="Update Game"/>
                         </form>
-                        <button value={game._id} onClick={this.deleteGame}>
+                        <button  value={game._id} onMouseEnter={this.warning} onMouseLeave={this.reset} onClick={this.deleteGame}>
                         DELETE </button>
                         </details>
                     </li>

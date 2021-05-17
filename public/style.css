@@ -1,9 +1,9 @@
-html
-/* {background: grey;} */
+
 
 ul {
     display:flex;
     flex-wrap: wrap;
+
 }
 
 h1 {
@@ -79,3 +79,13 @@ main {
 .off{
     display:none;
 }
+/* details{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    overflow: scroll;
+}
+
+form {
+    height: 20%;
+    overflow: scroll;
+} */

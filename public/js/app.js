@@ -105,8 +105,8 @@ class App extends React.Component{
             <input type="text" id="genre" onChange={this.handleChange}
              />
             <br/>
-            <label htmlFor="review">Review</label>
-            <input type="text" id="review" onChange={this.handleChange}
+            <label htmlFor="rating">Rating</label>
+            <input type="text" id="rating" onChange={this.handleChange}
              />
             <br/>
             <br/>
@@ -128,7 +128,7 @@ class App extends React.Component{
                     {game.genre}<br/>
                     {game.year}<br/>
 
-                    {game.review}
+                    {game.rating}/5 Stars
                     </article>
                     <img class = {this.state.filter} src ={game.image} alt = {game.title}/><br/>
                     <details>
@@ -149,9 +149,13 @@ class App extends React.Component{
                             <label htmlFor="year">Year</label>
                             <input type="text" id="year" onChange={this.handleChange}
                              />
-                            <label htmlFor="review">Review</label>
+                            <label htmlFor="rating">Rating</label>
                             <br/>
+<<<<<<< HEAD
                             <input type="text" id="review" onChange={this.handleChange}/>
+=======
+                            <input type="text" id="rating" onChange={this.handleChange}/>
+>>>>>>> a78bde43a0b4021e2d09d5cd66e993b7b1d82ff5
                             <input type="submit" className="btn waves-effect waves-light" value="Update Game"/>
                         </form>
                         <button  value={game._id} onMouseEnter={this.warning} onMouseLeave={this.reset} onClick={this.deleteGame}>

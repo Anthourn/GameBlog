@@ -1,9 +1,9 @@
-html
-/* {background: grey;} */
+
 
 ul {
     display:flex;
     flex-wrap: wrap;
+
 }
 
 h1 {
@@ -13,6 +13,12 @@ h1 {
 img {
     max-height: 200px;
     max-width: 75%;
+}
+img:hover {
+    filter:saturate(1.5);
+}
+.greyScale{
+    filter: grayscale(100);
 }
 .background {
   position: fixed;
@@ -73,3 +79,13 @@ main {
 .off{
     display:none;
 }
+/* details{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    overflow: scroll;
+}
+
+form {
+    height: 20%;
+    overflow: scroll;
+} */

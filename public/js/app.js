@@ -151,11 +151,9 @@ class App extends React.Component{
                              />
                             <label htmlFor="rating">Rating</label>
                             <br/>
-<<<<<<< HEAD
-                            <input type="text" id="review" onChange={this.handleChange}/>
-=======
+
                             <input type="text" id="rating" onChange={this.handleChange}/>
->>>>>>> a78bde43a0b4021e2d09d5cd66e993b7b1d82ff5
+                            
                             <input type="submit" className="btn waves-effect waves-light" value="Update Game"/>
                         </form>
                         <button  value={game._id} onMouseEnter={this.warning} onMouseLeave={this.reset} onClick={this.deleteGame}>

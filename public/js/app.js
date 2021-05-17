@@ -76,6 +76,16 @@ class App extends React.Component{
         })
 
     }
+    warning = () => {
+        this.setState({
+            filter:'greyScale'
+        })
+    }
+    reset = () => {
+        this.setState({
+            filter:'img'
+        })
+    }
     render = () => {
         return <div>
         <button className='waves-effect waves-light btn' onClick={this.revealModal}>New Game</button>
@@ -95,8 +105,8 @@ class App extends React.Component{
             <input type="text" id="genre" onChange={this.handleChange}
              />
             <br/>
-            <label htmlFor="review">Review</label>
-            <input type="text" id="review" onChange={this.handleChange}
+            <label htmlFor="rating">Rating</label>
+            <input type="text" id="rating" onChange={this.handleChange}
              />
             <br/>
             <br/>
@@ -118,7 +128,7 @@ class App extends React.Component{
                     {game.genre}<br/>
                     {game.year}<br/>
 
-                    {game.review}
+                    {game.rating}/5 Stars
                     </article>
                     <img class = {this.state.filter} src ={game.image} alt = {game.title}/><br/>
                     <details>
@@ -139,12 +149,12 @@ class App extends React.Component{
                             <label htmlFor="year">Year</label>
                             <input type="text" id="year" onChange={this.handleChange}
                              />
-                            <label htmlFor="review">Review</label>
+                            <label htmlFor="rating">Rating</label>
                             <br/>
-                            <input type="text" id="review" onChange={this.handleChange}/>
-                            <input type="submit" value="Update Game"/>
+                            <input type="text" id="rating" onChange={this.handleChange}/>
+                            <input type="submit" className="btn waves-effect waves-light" value="Update Game"/>
                         </form>
-                        <button value={game._id} onClick={this.deleteGame}>
+                        <button  value={game._id} onMouseEnter={this.warning} onMouseLeave={this.reset} onClick={this.deleteGame}>
                         DELETE </button>
                         </details>
                     </li>
